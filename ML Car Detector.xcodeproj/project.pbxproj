@@ -8,17 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		89C274B62773A58F00A877F6 /* ML_Car_DetectorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C274B52773A58F00A877F6 /* ML_Car_DetectorApp.swift */; };
-		89C274B82773A58F00A877F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C274B72773A58F00A877F6 /* ContentView.swift */; };
 		89C274BA2773A59100A877F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89C274B92773A59100A877F6 /* Assets.xcassets */; };
 		89C274BD2773A59100A877F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89C274BC2773A59100A877F6 /* Preview Assets.xcassets */; };
+		89C274C52773A6E700A877F6 /* ImageDetectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C274C42773A6E700A877F6 /* ImageDetectorViewModel.swift */; };
+		89C274C72773A71800A877F6 /* ImageDetectorScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C274C62773A71800A877F6 /* ImageDetectorScreen.swift */; };
+		89C274CA2773A78B00A877F6 /* CarRecognition.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 89C274C92773A78B00A877F6 /* CarRecognition.mlmodel */; };
+		89C274CC2773A88700A877F6 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C274CB2773A88700A877F6 /* ImagePicker.swift */; };
+		89C274CE2773B34000A877F6 /* UIImage + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C274CD2773B34000A877F6 /* UIImage + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		89C274B22773A58F00A877F6 /* ML Car Detector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ML Car Detector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89C274B52773A58F00A877F6 /* ML_Car_DetectorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ML_Car_DetectorApp.swift; sourceTree = "<group>"; };
-		89C274B72773A58F00A877F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		89C274B92773A59100A877F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89C274BC2773A59100A877F6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		89C274C42773A6E700A877F6 /* ImageDetectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetectorViewModel.swift; sourceTree = "<group>"; };
+		89C274C62773A71800A877F6 /* ImageDetectorScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetectorScreen.swift; sourceTree = "<group>"; };
+		89C274C92773A78B00A877F6 /* CarRecognition.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = CarRecognition.mlmodel; sourceTree = "<group>"; };
+		89C274CB2773A88700A877F6 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		89C274CD2773B34000A877F6 /* UIImage + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIImage + Extension.swift"; path = "../../../../../Documents/UIImage + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +59,11 @@
 		89C274B42773A58F00A877F6 /* ML Car Detector */ = {
 			isa = PBXGroup;
 			children = (
+				89C274C82773A78B00A877F6 /* Resources */,
 				89C274B52773A58F00A877F6 /* ML_Car_DetectorApp.swift */,
-				89C274B72773A58F00A877F6 /* ContentView.swift */,
+				89C274CB2773A88700A877F6 /* ImagePicker.swift */,
+				89C274CD2773B34000A877F6 /* UIImage + Extension.swift */,
+				89C274C32773A6D600A877F6 /* ImageDetector */,
 				89C274B92773A59100A877F6 /* Assets.xcassets */,
 				89C274BB2773A59100A877F6 /* Preview Content */,
 			);
@@ -65,6 +76,23 @@
 				89C274BC2773A59100A877F6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		89C274C32773A6D600A877F6 /* ImageDetector */ = {
+			isa = PBXGroup;
+			children = (
+				89C274C42773A6E700A877F6 /* ImageDetectorViewModel.swift */,
+				89C274C62773A71800A877F6 /* ImageDetectorScreen.swift */,
+			);
+			path = ImageDetector;
+			sourceTree = "<group>";
+		};
+		89C274C82773A78B00A877F6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				89C274C92773A78B00A877F6 /* CarRecognition.mlmodel */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89C274B82773A58F00A877F6 /* ContentView.swift in Sources */,
+				89C274CA2773A78B00A877F6 /* CarRecognition.mlmodel in Sources */,
+				89C274C72773A71800A877F6 /* ImageDetectorScreen.swift in Sources */,
+				89C274CC2773A88700A877F6 /* ImagePicker.swift in Sources */,
 				89C274B62773A58F00A877F6 /* ML_Car_DetectorApp.swift in Sources */,
+				89C274C52773A6E700A877F6 /* ImageDetectorViewModel.swift in Sources */,
+				89C274CE2773B34000A877F6 /* UIImage + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

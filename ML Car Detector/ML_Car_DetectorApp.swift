@@ -11,7 +11,7 @@ import SwiftUI
 struct ML_Car_DetectorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ImageDetectorScreen()
         }
     }
 }
