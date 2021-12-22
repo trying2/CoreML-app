@@ -8,6 +8,7 @@
 import Foundation
 import CoreML
 import Combine
+import UIKit
 
 final class ImageDetectorViewModel: ObservableObject {
     @Published var result: String = ""
